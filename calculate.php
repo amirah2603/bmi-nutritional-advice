@@ -10,7 +10,7 @@
 	<h2>Click "CALCULATE" when ready.</h2>
 
 	<div class="calc-group-vertical">
-    	<input type=button onClick="location.href='192.168.137.60'" class="calc" value="CALCULATE saya tambah sikit">
+    	<input type=button onClick="location.href='192.168.137.60'" href="<?php echo ROOT_URL; ?>" class="calc" value="CALCULATE">
 	</div>
 
 <?php
