@@ -1,3 +1,5 @@
+<?php include ('db.php')?>
+<?php include ('config.php')?>
 <!DOCTYPE html>
 <html>
 <head>
