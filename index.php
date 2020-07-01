@@ -9,9 +9,9 @@
 	<h1>Welcome Back, Amirah.</h1>
 
 	<div class="btn-group-vertical">
-    	<input type=button onClick="location.href='calculate.php'" class="btn" value="CALCULATE BMI">
-    	<input type=button onClick="location.href='progress_update.php'" class="btn" value="PERFORMANCE">
-    	<input type=button onClick="location.href='advice.php'"  class="btn" value="NUTRITIONAL ADVICE">
+    	<input type=button onClick="location.href='calculate.php'" href="<?php echo ROOT_URL; ?>" class="btn" value="CALCULATE BMI">
+    	<input type=button onClick="location.href='progress_update.php'" href="<?php echo ROOT_URL; ?>" class="btn" value="PERFORMANCE">
+    	<input type=button onClick="location.href='advice.php'" href="<?php echo ROOT_URL; ?>" class="btn" value="NUTRITIONAL ADVICE">
 	</div>
 
 
