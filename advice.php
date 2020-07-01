@@ -1,3 +1,4 @@
+<?php include ('config/config.php')?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -102,6 +103,8 @@
 		</div>
 	</div> 
 </div>
-
+<?php
+echo 'This is Advice Page';
+?>
 </body>
 </html>
