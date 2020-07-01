@@ -1,3 +1,4 @@
+<?php include ('config/config.php')?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -46,8 +47,10 @@
     <script src="line-db-php.js"></script>
 
   <div class="performance-group-vertical">
-    <input type=button onClick="location.href='home.html'" class="performance" value="HOME">
+    <input type=button onClick="location.href='home.php'" href="<?php echo ROOT_URL; ?>"class="performance" value="HOME">
   </div>
-    
+<?php
+echo 'This is Performance Page';
+?>
 </body>
 </html>
