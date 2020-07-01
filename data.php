@@ -1,5 +1,3 @@
-<?php include ('db.php')?>
-<?php include ('config.php')?>
 <?php
 /**
  * filename: data.php
