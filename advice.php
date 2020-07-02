@@ -24,10 +24,9 @@
   				<?php
 				$sql = 'SELECT user_id, user_bmi, created_at FROM bmi ORDER BY created_at DESC';
   				$stmt = $pdo->prepare($sql);
-  				$stmt->execute();
-  				$stmt->bind_result($user_bmi);
-  				while ($stmt->fetch()) {
-        				print_r($user_bmi);
+  				$stmt->execute();		
+				$row = $stm->fetch(PDO::FETCH_ASSOC);
+				echo "Your BMI " . $row['user_bmi'] . PHP_EOL;
     				}
 // 				if ($BMI < 18.5){
 // 					echo ". You are Underweight.";
