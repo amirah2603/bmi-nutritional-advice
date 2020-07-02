@@ -27,7 +27,7 @@
   				$stmt->execute();
   				$rowCount = $stmt->rowCount();
   				$details = $stmt->fetch();
- 	 			print_r ($details[$user_bmi);
+ 	 			print_r ($details[$user_bmi]);
 
 // 				if ($BMI < 18.5){
 // 					echo ". You are Underweight.";
