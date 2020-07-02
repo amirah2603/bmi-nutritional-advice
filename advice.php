@@ -29,8 +29,9 @@
 //   				$rowCount = $stmt->rowCount();
 //   				$details = $stmt->fetch();
 				$result = $stmt->fetch(PDO::FETCH_OBJ);
-				print_r ($result->user_bmi);
-?>
+				$BMI = $result->user_bmi;
+				echo "Your BMI is" .$BMI;
+					
 // 				if ($BMI < 18.5){
 // 					echo ". You are Underweight.";
 // 					echo "</h4>";
