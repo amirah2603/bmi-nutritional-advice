@@ -1,3 +1,4 @@
+<?php include ('db.php')?>
 <?php include ('config.php')?>
 <!DOCTYPE html>
 <html>
@@ -21,18 +22,26 @@
   		<div class="col my-col">
   			<div class="centered">
   				<?php
-				$conn = mysqli_connect("localhost", "root", "", "distance");
-				if ($conn-> connect_error) {
-					die("Connection failed:". $conn-> connect_error);
-				}
+				<?php
+  //echo 'This is Index Page';
 
-				$sql = "SELECT id, length from iot_project ORDER BY id DESC";
-				$result = $conn-> query($sql);
+  $sql = 'SELECT * FROM users';
+  $stmt = $pdo->prepare($sql);
+  $stmt->execute();
+  $rowCount = $stmt->rowCount();
+  $details = $stmt->fetch();
 
-				$result = $result-> fetch_assoc();
-
+  print_r ($details);
+?>
+				$sql = "SELECT user_id, user_bmi, created_at FROM bmi WHERE timestamp = (SELECT MAX(created_at) FROM bmi);";
+				$result = $pdo->prepare($sql);
+<!-- 				$result = $conn-> query($sql); -->
+				$result->execute();
+<!-- 				$result = $result-> fetch_assoc(); -->
+				$details = $result->fetch();
 				// $BMI = $result["length"];
-				$BMI = 19;
+				$BMI = $result["user_bmi"];
+<!-- 				$BMI = 19; -->
 				echo "<h4>Your BMI is ".$BMI;
 
 				if ($BMI < 18.5){
@@ -96,7 +105,7 @@
 
 				echo "</h2>";
 
-				$conn-> close();
+<!-- 				$conn-> close(); -->
 				?>
   			</div>
 		
