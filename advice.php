@@ -1,4 +1,4 @@
-<?php include ('db.php')?>
+<!-- <?php include ('db.php')?> -->
 <?php include ('config.php')?>
 <!DOCTYPE html>
 <html>
@@ -22,13 +22,29 @@
   		<div class="col my-col">
   			<div class="centered">
   				<?php
+				$host        = "host=ec2-34-197-188-147.compute-1.amazonaws.com";
+   				$port        = "port=5432";
+   				$dbname      = "dbname = danoh2mjnt7j0s";
+   				$credentials = "user = xaiwgzulsgxtkb password=fc7a410c7df6fb94b409aa0d78e3f2fb15440e42f75b694fbb2a966e448ad8d6";
+   				$db = pg_connect( "$host $port $dbname $credentials"  );
+  				if(!$db) {
+      					echo "Error : Unable to open database\n";
+   				} else {
+      					echo "Opened database successfully\n";
+   				}
 				$sql = "SELECT user_id, user_bmi, created_at FROM bmi WHERE timestamp = (SELECT MAX(created_at) FROM bmi);";
 // 				$result = $pdo->prepare($sql);
-				$result = $conn-> query($sql);
+				$ret = pg_query($db, $sql);
+   				if(!$ret) {
+      					echo pg_last_error($db);
+      				exit;
+  				 } 
+				$result = pg_fetch_row($ret)
+// 				$result = $conn-> query($sql);
 // 				$result->execute();
-				$result = $result-> fetch_assoc(); 
+// 				$result = $result-> fetch_assoc(); 
 // 				$details = $result->fetch();
-				$BMI = $result["user_bmi"];
+				$BMI = .$row[4] .;
 // 				$BMI = $result["user_bmi"];
 //  				$BMI = 19;
 				echo "<h4>Your BMI is ".$BMI;
@@ -93,7 +109,7 @@
 				}
 
 				echo "</h2>";
-
+   				pg_close($db);
 // 				$conn-> close(); 
 				?>
   			</div>
