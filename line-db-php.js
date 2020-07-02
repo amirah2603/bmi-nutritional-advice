@@ -4,7 +4,7 @@ $(document).ready(function() {
    * call the data.php file to fetch the result from db table.
    */
   $.ajax({
-    url : "data.php",
+    url : "https://balanced-mammoth-25.hasura.app/v1/graphql",
     type : "GET",
     success : function(data) {
       console.log(data);
