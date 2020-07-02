@@ -22,11 +22,10 @@
   		<div class="col my-col">
   			<div class="centered">
   				<?php
-				$sth = $dbh->prepare("SELECT user_bmi, user_id FROM bmi");
-				$sth->execute();		
-				$result = $sth->fetch(PDO::FETCH_OBJ);
-				print $result->user_bmi;
-    				}
+				$sql= "SELECT * FROM bmi";
+				foreach(pdo->query($sql)as $row){
+					print $row['user_bmi'];
+				}
 // 				if ($BMI < 18.5){
 // 					echo ". You are Underweight.";
 // 					echo "</h4>";
