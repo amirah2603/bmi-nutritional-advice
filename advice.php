@@ -22,17 +22,6 @@
   		<div class="col my-col">
   			<div class="centered">
   				<?php
-				<?php
-  //echo 'This is Index Page';
-
-  $sql = 'SELECT * FROM users';
-  $stmt = $pdo->prepare($sql);
-  $stmt->execute();
-  $rowCount = $stmt->rowCount();
-  $details = $stmt->fetch();
-
-  print_r ($details);
-?>
 				$sql = "SELECT user_id, user_bmi, created_at FROM bmi WHERE timestamp = (SELECT MAX(created_at) FROM bmi);";
 				$result = $pdo->prepare($sql);
 <!-- 				$result = $conn-> query($sql); -->
