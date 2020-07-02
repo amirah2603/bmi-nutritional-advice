@@ -22,7 +22,7 @@
   		<div class="col my-col">
   			<div class="centered">
   				<?php
-				$sql = 'SELECT * FROM users';
+				$sql = 'SELECT * FROM bmi';
   				$stmt = $pdo->prepare($sql);
   				$stmt->execute();
   				$rowCount = $stmt->rowCount();
