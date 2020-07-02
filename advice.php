@@ -30,7 +30,7 @@
 // 				$details = $result->fetch();
 				$BMI = $result["user_bmi"];
 // 				$BMI = $result["user_bmi"];
- 				$BMI = 19;
+//  				$BMI = 19;
 				echo "<h4>Your BMI is ".$BMI;
 
 				if ($BMI < 18.5){
