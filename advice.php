@@ -30,7 +30,7 @@
 //   				$details = $stmt->fetch();
 				$BMI = $field->user_bmi;
 //  				$BMI = 19;
-				echo "<h4>Your BMI is ".$user_bmi;
+				echo "<h4>Your BMI is " .$BMI;
 
 // 				if ($BMI < 18.5){
 // 					echo ". You are Underweight.";
