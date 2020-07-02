@@ -22,21 +22,12 @@
   		<div class="col my-col">
   			<div class="centered">
   				<?php
-// 				$sql = 'SELECT user_id, user_bmi, created_at FROM bmi ORDER BY created_at DESC LIMIT 1';
-//   				$stmt = $pdo->prepare($sql);
-//   				$stmt->execute();
-// 				$result = $stmt->result_metadata();
-// 				$field = $result->fetch_field();
-// //   				$details = $stmt->fetch();
-				$query = "SELECT user_id, user_bmi, created_at FROM bmi ORDER BY created_at DESC LIMIT 1";
-				$result = $db->query($query);
-				while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
-    					echo "<h4> Your BMI is" . htmlspecialchars($row["user_bmi"]) . ;
-				}
-				$result->closeCursor();
-// 				$BMI = $field->user_bmi;
-//  				$BMI = 19;
-// 				echo "<h4>Your BMI is " .$BMI;
+				$sql = 'SELECT user_id, user_bmi, created_at FROM bmi ORDER BY created_at DESC';
+  				$stmt = $pdo->prepare($sql);
+  				$stmt->execute();
+  				$rowCount = $stmt->rowCount();
+  				$details = $stmt->fetch();
+ 	 			print_r ($details);
 
 // 				if ($BMI < 18.5){
 // 					echo ". You are Underweight.";
