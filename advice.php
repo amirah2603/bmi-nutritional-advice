@@ -22,10 +22,9 @@
   		<div class="col my-col">
   			<div class="centered">
   				<?php
-				$sql = 'SELECT user_id, user_bmi, created_at FROM bmi ORDER BY created_at DESC';
-  				$stmt = $pdo->prepare($sql);
-  				$stmt->execute();		
-				$result = $stmt->fetch(PDO::FETCH_OBJ);
+				$sth = $dbh->prepare("SELECT user_bmi, user_id FROM bmi");
+				$sth->execute();		
+				$result = $sth->fetch(PDO::FETCH_OBJ);
 				print $result->user_bmi;
     				}
 // 				if ($BMI < 18.5){
