@@ -22,15 +22,25 @@
   		<div class="col my-col">
   			<div class="centered">
   				<?php
-				$sql = 'SELECT user_id, user_bmi, created_at FROM bmi ORDER BY created_at DESC LIMIT 1';
-  				$stmt = $pdo->prepare($sql);
-  				$stmt->execute();
-				$result = $stmt->result_metadata();
-				$field = $result->fetch_field();
-//   				$details = $stmt->fetch();
-				$BMI = $field->user_bmi;
+// 				$sql = 'SELECT user_id, user_bmi, created_at FROM bmi ORDER BY created_at DESC LIMIT 1';
+//   				$stmt = $pdo->prepare($sql);
+//   				$stmt->execute();
+// 				$result = $stmt->result_metadata();
+// 				$field = $result->fetch_field();
+// //   				$details = $stmt->fetch();
+				$query = "SELECT user_id, user_bmi, created_at FROM bmi ORDER BY created_at DESC LIMIT 1";
+				$result = $db->query($query);
+				while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
+					echo "<tr>";
+					echo "<td>" . $row["user_id"] . "</td>";
+    					echo "<td>" . htmlspecialchars($row["user_bmi"]) . "</td>";
+   					echo "<td>" . htmlspecialchars($row["created_at"]) . "</td>";
+    					echo "</tr>";
+				}
+				$result->closeCursor();
+// 				$BMI = $field->user_bmi;
 //  				$BMI = 19;
-				echo "<h4>Your BMI is " .$BMI;
+// 				echo "<h4>Your BMI is " .$BMI;
 
 // 				if ($BMI < 18.5){
 // 					echo ". You are Underweight.";
