@@ -30,70 +30,68 @@
 //   				$details = $stmt->fetch();
 				$result = $stmt->fetch(PDO::FETCH_OBJ);
 				$BMI = $result->user_bmi;
-				echo "Your BMI is" .$BMI;
+				echo "Your BMI is " .$BMI;
 					
-// 				if ($BMI < 18.5){
-// 					echo ". You are Underweight.";
-// 					echo "</h4>";
-// 					echo "</h2>";
-// 					echo "<ol>";
-// 					echo "<li>Eat more frequently. Eat 5-6 smaller meals during the day rather than 2-3 large meals.</li>";
-// 					echo "<li>Choose high calories foods. this is temmporary until healthy weight is achieved.</li>";
-// 					echo "<li>Exercise regularly. At least once a week. </li>";
-// 					echo "<li>Increase intake of food with high protein in every meal. </li>";
-// 					echo "<li>Eat more vegetables and fruits.</li>";
-// 					echo "<li>Increase intake of Whole Grain/Fiber.</li>";
-// 					echo "<li>Eat according to Malaysian Healthy Plate method every meals: </li>";
-// 					echo "<ul>";
-// 					echo "<li>1/3 portion of Carbohydrates.</li>";
-// 					echo "<li>1/3 portion of Protein.</li>";
-// 					echo "<li>1/3 portion of WHole Grain/Fiber.</li>";
-// 					echo "</ul>";
-// 					echo "</ol>";
-// 				}
-// 				else if(($BMI > 18.5) & ($BMI < 24.9)){
-// 					echo ". You are Normal.";
-// 					echo "</h4>";
-// 					echo "</h2>";
-// 					echo "<ol>";
-// 					echo "<li>Increase intake of Whole Grain/Fiber.</li>";
-// 					echo "<li>Keep your eating patter consistent.</li>";
-// 					echo "<li>Get daily physical activity.</li>";
-// 					echo "<li>Monitor your diet and activity. Keeping a food and physical activity journal can help you track your progress and spot trends.</li>";
-// 					echo "<li>Monitor your weight. Check your weight regularly.</li>";
-// 					echo "<li>Eat more vegetables and fruits</li>";
-// 					echo "</ol>";
-// 				}
-// 				else if(($BMI > 25) & ($BMI < 29.9)){
-// 					echo ". You are Overweight.";
-// 					echo "</h4>";
-// 					echo "</h2>";
-// 					echo "<ol>";
-// 					echo "<li>Eat according to meal time. Avoid doing anything else while eating to help you aware with the amount of food you consume.</li>";
-// 					echo "<li>Reduce intake of fats. Take at most 1 tablespoon of fat in one meal.</li>";
-// 					echo "<li>Limit intake of sugar-sweetened drinks. Take at most 1 glass in one day.</li>";
-// 					echo "<li>Choose food high in fiber. Take vegetable at least 3 times every day, fruits at least 2 times every day and whole grain food at least once every day.</li>";
-// 					echo "<li>Limit intake of complex carbohydrates such as rice and noodle. Take at most 200 gram in one meal.</li>";
-// 					echo "<li>Moitor weight loss which at most 2 kg per month to avoid abrupt weight loss that can cause other illness.</li>";
-// 					echo "</ol>";
-// 				}
-// 				else{
-// 					echo ". You are Obese.";
-// 					echo "</h4>";
-// 					echo "</h2>";
-// 					echo "<ol>";
-// 					echo "<li>Eat according to meal time. Avoid doing anything else while eating to help you aware with the amount of food you consume.</li>";
-// 					echo "<li>Reduce intake of fats. Take at most 1 tablespoon of fat in one meal.</li>";
-// 					echo "<li>Limit intake of sugar-sweetened drinks. Take at most 1 glass in one day.</li>";
-// 					echo "<li>Choose food high in fiber. Take vegetable at least 3 times every day, fruits at least 2 times every day and whole grain food at least once every day.</li>";
-// 					echo "<li>Limit intake of complex carbohydrates such as rice and noodle. Take at most 200 gram in one meal.</li>";
-// 					echo "<li>Moitor weight loss which at most 2 kg per month to avoid abrupt weight loss that can cause other illness.</li>";
-// 					echo "</ol>";
-// 				}
+				if ($BMI < 18.5){
+					echo ". You are Underweight.";
+					echo "</h4>";
+					echo "</h2>";
+					echo "<ol>";
+					echo "<li>Eat more frequently. Eat 5-6 smaller meals during the day rather than 2-3 large meals.</li>";
+					echo "<li>Choose high calories foods. this is temmporary until healthy weight is achieved.</li>";
+					echo "<li>Exercise regularly. At least once a week. </li>";
+					echo "<li>Increase intake of food with high protein in every meal. </li>";
+					echo "<li>Eat more vegetables and fruits.</li>";
+					echo "<li>Increase intake of Whole Grain/Fiber.</li>";
+					echo "<li>Eat according to Malaysian Healthy Plate method every meals: </li>";
+					echo "<ul>";
+					echo "<li>1/3 portion of Carbohydrates.</li>";
+					echo "<li>1/3 portion of Protein.</li>";
+					echo "<li>1/3 portion of WHole Grain/Fiber.</li>";
+					echo "</ul>";
+					echo "</ol>";
+				}
+				else if(($BMI > 18.5) & ($BMI < 24.9)){
+					echo ". You are Normal.";
+					echo "</h4>";
+					echo "</h2>";
+					echo "<ol>";
+					echo "<li>Increase intake of Whole Grain/Fiber.</li>";
+					echo "<li>Keep your eating patter consistent.</li>";
+					echo "<li>Get daily physical activity.</li>";
+					echo "<li>Monitor your diet and activity. Keeping a food and physical activity journal can help you track your progress and spot trends.</li>";
+					echo "<li>Monitor your weight. Check your weight regularly.</li>";
+					echo "<li>Eat more vegetables and fruits</li>";
+					echo "</ol>";
+				}
+				else if(($BMI > 25) & ($BMI < 29.9)){
+					echo ". You are Overweight.";
+					echo "</h4>";
+					echo "</h2>";
+					echo "<ol>";
+					echo "<li>Eat according to meal time. Avoid doing anything else while eating to help you aware with the amount of food you consume.</li>";
+					echo "<li>Reduce intake of fats. Take at most 1 tablespoon of fat in one meal.</li>";
+					echo "<li>Limit intake of sugar-sweetened drinks. Take at most 1 glass in one day.</li>";
+					echo "<li>Choose food high in fiber. Take vegetable at least 3 times every day, fruits at least 2 times every day and whole grain food at least once every day.</li>";
+					echo "<li>Limit intake of complex carbohydrates such as rice and noodle. Take at most 200 gram in one meal.</li>";
+					echo "<li>Moitor weight loss which at most 2 kg per month to avoid abrupt weight loss that can cause other illness.</li>";
+					echo "</ol>";
+				}
+				else{
+					echo ". You are Obese.";
+					echo "</h4>";
+					echo "</h2>";
+					echo "<ol>";
+					echo "<li>Eat according to meal time. Avoid doing anything else while eating to help you aware with the amount of food you consume.</li>";
+					echo "<li>Reduce intake of fats. Take at most 1 tablespoon of fat in one meal.</li>";
+					echo "<li>Limit intake of sugar-sweetened drinks. Take at most 1 glass in one day.</li>";
+					echo "<li>Choose food high in fiber. Take vegetable at least 3 times every day, fruits at least 2 times every day and whole grain food at least once every day.</li>";
+					echo "<li>Limit intake of complex carbohydrates such as rice and noodle. Take at most 200 gram in one meal.</li>";
+					echo "<li>Moitor weight loss which at most 2 kg per month to avoid abrupt weight loss that can cause other illness.</li>";
+					echo "</ol>";
+				}
 
-// 				echo "</h2>";
-//    				pg_close($db);
-// 				$conn-> close(); 
+				echo "</h2>";
 				?>
   			</div>
 		
