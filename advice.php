@@ -31,11 +31,7 @@
 				$query = "SELECT user_id, user_bmi, created_at FROM bmi ORDER BY created_at DESC LIMIT 1";
 				$result = $db->query($query);
 				while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
-					echo "<tr>";
-					echo "<td>" . $row["user_id"] . "</td>";
-    					echo "<td>" . htmlspecialchars($row["user_bmi"]) . "</td>";
-   					echo "<td>" . htmlspecialchars($row["created_at"]) . "</td>";
-    					echo "</tr>";
+    					echo "<h4> Your BMI is" . htmlspecialchars($row["user_bmi"]) . ;
 				}
 				$result->closeCursor();
 // 				$BMI = $field->user_bmi;
