@@ -22,13 +22,13 @@
   		<div class="col my-col">
   			<div class="centered">
   				<?php
-// 				$sql = "SELECT user_id, user_bmi, created_at FROM bmi WHERE timestamp = (SELECT MAX(created_at) FROM bmi);";
+				$sql = "SELECT user_id, user_bmi, created_at FROM bmi WHERE timestamp = (SELECT MAX(created_at) FROM bmi);";
 // 				$result = $pdo->prepare($sql);
-// // 				$result = $conn-> query($sql);
+				$result = $conn-> query($sql);
 // 				$result->execute();
-// // 				$result = $result-> fetch_assoc(); 
+				$result = $result-> fetch_assoc(); 
 // 				$details = $result->fetch();
-				// $BMI = $result["length"];
+				$BMI = $result["user_bmi"];
 // 				$BMI = $result["user_bmi"];
  				$BMI = 19;
 				echo "<h4>Your BMI is ".$BMI;
