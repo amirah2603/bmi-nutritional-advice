@@ -22,7 +22,7 @@
   		<div class="col my-col">
   			<div class="centered">
   				<?php
-				$sql = 'SELECT * FROM bmi WHERE user_id=(select max(user_id) from bmi)';
+				$sql = 'SELECT user_id, user_bmi FROM bmi ORDER BY user_id DESC)';
   				$stmt = $pdo->prepare($sql);
   				$stmt->execute();
 				$result = $stmt->fetch(PDO::FETCH_OBJ);
