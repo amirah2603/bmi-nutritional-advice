@@ -28,7 +28,7 @@
   				$rowCount = $stmt->rowCount();
   				$details = $stmt->fetch();
 
-  				print_r ($details);
+  				echo .$details;
 //  				$BMI = 19;
 // 				echo "<h4>Your BMI is ".$BMI;
 
