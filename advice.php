@@ -22,7 +22,7 @@
   		<div class="col my-col">
   			<div class="centered">
   				<?php
-				$sql = 'SELECT user_id, user_bmi FROM bmi ORDER BY user_id DESC)';
+				$sql = 'SELECT * FROM bmi ORDER BY user_id)';
   				$stmt = $pdo->prepare($sql);
   				$stmt->execute();
 				$result = $stmt->fetch(PDO::FETCH_OBJ);
