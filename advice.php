@@ -25,7 +25,7 @@
 				$sql = 'SELECT user_id, user_bmi, created_at FROM bmi ORDER BY created_at DESC';
   				$stmt = $pdo->prepare($sql);
   				$stmt->execute();		
-				$result = $sth->fetch(PDO::FETCH_OBJ);
+				$result = $stmt->fetch(PDO::FETCH_OBJ);
 				print $result->user_bmi;
     				}
 // 				if ($BMI < 18.5){
